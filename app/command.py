@@ -46,13 +46,16 @@ def command():
             print("输入指令错误，请重新输入！")
             desc()
         if user_input == 'record':
-            print('按下【r】开始录音，按下【Ctrl + C】结束录音，录音最长持续时间30s')
+            print('按下【r】开始录音，按下【Ctrl + C】结束录音，输入【exit】退出，录音最长持续时间30s')
             try:
                 while True:
                     key = input('>>> ')
                     if key.lower() == 'r':
                         print('正在录音...')
                         break
+                    if key.lower() == 'exit':
+                        print('bye~')
+                        exit()
                     print('指令错误，按下【r】开始录音.')
 
                 p = pyaudio.PyAudio()
@@ -128,13 +131,16 @@ def command():
                     print('输入错误，请重新输入')
             desc()
         if user_input == 'chat':
-            print('按下【r】开始说话，按下【Ctrl + C】结束，最长持续时间30s')
+            print('按下【r】开始说话，按下【Ctrl + C】结束，输入【exit】退出，最长持续时间30s')
             try:
                 while True:
                     key = input('>>> ')
                     if key.lower() == 'r':
                         print('正在录音...')
                         break
+                    if key.lower() == 'exit':
+                        print('bye~')
+                        exit()
                     print('指令错误，按下【r】开始说话.')
 
                 p = pyaudio.PyAudio()
