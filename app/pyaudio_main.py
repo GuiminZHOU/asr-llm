@@ -1,7 +1,7 @@
 import time
 import pyaudio
 import wave
-from app.asr import single_flash_sr_with_file_name
+from app.asr import single_flash_sr_with_file
 
 CHUNK = 1024
 FORMAT = pyaudio.paInt16
@@ -106,7 +106,7 @@ def generate_audio():
 def recognize_audio(audio_file_name: str):
     file_path = AUDIO_BASE_DIR + '/' + audio_file_name
     print('录音文件【{}】识别中...' . format(audio_file_name))
-    result = single_flash_sr_with_file_name(file_path, 'wav')
+    result = single_flash_sr_with_file(file_path)
     print('录音文件【{}】识别结果：{}' . format(audio_file_name, result))
 
     return result

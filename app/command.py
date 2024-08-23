@@ -97,7 +97,12 @@ def command():
                 print(f"{index}. {entry}")
             while True:
                 try:
-                    index_input = int(input('请输入序号>>> '))
+                    play_input = input('请输入序号>>> ')
+                    if play_input.lower() == 'exit':
+                        print('bye~')
+                        exit(0)
+
+                    index_input = int(play_input)
                     i = index_input - 1
                     if i < 0 or i >= len(entries):
                         print('文件不存在！请重新输入指令！')
@@ -119,7 +124,12 @@ def command():
                 print(f"{index}. {entry}")
             while True:
                 try:
-                    index_input = int(input('请输入序号>>> '))
+                    play_input = input('请输入序号>>> ')
+                    if play_input.lower() == 'exit':
+                        print('bye~')
+                        exit(0)
+
+                    index_input = int(play_input)
                     i = index_input - 1
                     if i < 0 or i >= len(entries):
                         print('文件不存在！请重新输入指令！')

@@ -81,8 +81,16 @@ def single_flash_sr_with_file_name(file: str, ext: str):
     return t.get_result()
 
 
+def single_flash_sr_with_file(file: str):
+    _, ext = os.path.splitext(file)
+    ext.replace('.', '')
+    t = FlashSr(file, ext)
+    t.start()
+    return t.get_result()
+
+
 if __name__ == '__main__':
     # 设置打开日志输出
     nls.enableTrace(False)
-    result = single_flash_sr_with_file_name('./audio/output_1724058346221.wav', 'wav')
+    result = single_flash_sr_with_file('./audio/output_1724058346221.wav')
     print(result)
