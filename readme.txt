@@ -23,8 +23,8 @@ access key申请传送门：https://help.aliyun.com/zh/isi/getting-started/start
 nls app key申请传送门：https://nls-portal.console.aliyun.com/applist
 
 2. 启动ollama
-# 默认使用qwen2模型，如需使用其他模型，可以调整llm.py中model变量，并ollama运行对应的模型即可
-ollama run qwen2
+# 默认使用qwen2.5模型，如需使用其他模型，可以调整.env中OLLAMA_MODEL变量，并ollama运行对应的模型即可
+ollama run qwen2.5
 
 3. 执行main.py
 ./venv/bin/python main.py

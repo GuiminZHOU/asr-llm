@@ -1,14 +1,17 @@
 import json
 import requests
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 # NOTE: ollama must be running for this to work, start the ollama app or run `ollama serve`
-model = "qwen2"
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL")
 
 
 def request_ollama(messages):
     r = requests.post(
-        "http://0.0.0.0:11434/api/chat",
-        json={"model": model, "messages": messages, "stream": True},
+        "http://localhost:11434/api/chat",
+        json={"model": OLLAMA_MODEL, "messages": messages, "stream": True},
         stream=True
     )
     r.raise_for_status()
