@@ -1,4 +1,4 @@
-A simple ASR-LLM implementation based on pyaudio + modelscope-funasr + ollama
+A simple ASR-LLM implementation based on pyaudio + funasr + ollama
 
 [Installation Process]
 1. Execute setup.sh
@@ -30,6 +30,7 @@ A simple ASR-LLM implementation based on pyaudio + modelscope-funasr + ollama
 >./venv/bin/python main.py
 
 [tips]
-1. modelscope/funasr: https://github.com/modelscope/FunASR
+1. funasr: https://github.com/modelscope/FunASR
 2. when using funasr for the first time, the model will be downloaded. You can execute the main method in the fun_asr.py file (a wav file needs to be provided).
 3. the path to the funasr model folder is generally /Users/xxx/.cache/modelscope/hub/iic/SenseVoiceSmall. You need to assign this path to the FUNASR_MODEL_DIR variable in the .env file.
+4. If you want to use aliyun-nls, switch the recognize method used in the recognize_audio method of the pyaudio_main.py file to asr.py. You need to install the nls-sdk and configure the aliyun ak/sk.

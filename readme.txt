@@ -1,4 +1,4 @@
-基于pyaudio + modelscope-funasr + ollama实现的简单版asr-llm
+基于pyaudio + funasr + ollama实现的简单版asr-llm
 
 【安装过程】
 1. 执行setup.sh
@@ -23,13 +23,14 @@ access key申请传送门：https://help.aliyun.com/zh/isi/getting-started/start
 nls app key申请传送门：https://nls-portal.console.aliyun.com/applist
 
 2. 启动ollama
-# 默认使用qwen2.5模型，如需使用其他模型，可以调整.env中OLLAMA_MODEL变量，并ollama运行对应的模型即可，默认使用deepseek-r1:7b
+# 默认使用deepseek-r1:7b模型，如需使用其他模型，可以调整.env中OLLAMA_MODEL变量，并ollama运行对应的模型即可，默认使用deepseek-r1:7b
 ollama run deepseek-r1:7b
 
 3. 执行main.py
 ./venv/bin/python main.py
 
 【注意事项】
-1. modelscope/funasr传送门：https://github.com/modelscope/FunASR
+1. funasr传送门：https://github.com/modelscope/FunASR
 2. 首次使用funasr时会下载模型，可以先执行fun_asr.py文件中main方法即可(需提供一个wav文件)
 3. funasr模型文件夹路径一般为/Users/xxx/.cache/modelscope/hub/iic/SenseVoiceSmall，需要将该路径赋值到.env中的FUNASR_MODEL_DIR变量
+4. 如果想使用aliyun-nls，将pyaudio_main.py文件recognize_audio方法中使用的recognize方法切换为asr.py即可，需安装nls-sdk以及配置aliyun ak/sk

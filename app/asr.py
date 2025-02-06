@@ -81,7 +81,7 @@ def single_flash_sr_with_file_name(file: str, ext: str):
     return t.get_result()
 
 
-def single_flash_sr_with_file(file: str):
+def recognize(file: str):
     _, ext = os.path.splitext(file)
     ext = ext.replace('.', '')
     t = FlashSr(file, ext)
