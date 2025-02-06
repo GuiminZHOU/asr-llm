@@ -23,6 +23,6 @@ fi
 
 # 创建.env文件并写入内容
 echo "writing content to .env..."
-echo -e "ALIYUN_AK_ID=${ALIYUN_AK_ID}\nALIYUN_AK_SECRET=${ALIYUN_AK_SECRET}\nAPP_KEY=${APP_KEY}" > .env
+echo -e "ALIYUN_AK_ID=${ALIYUN_AK_ID}\nALIYUN_AK_SECRET=${ALIYUN_AK_SECRET}\nAPP_KEY=${APP_KEY}\nOLLAMA_MODEL=deepseek-r1:7b\nFUNASR_MODEL_DIR=" > .env
 
 echo "init completed."
