@@ -2,6 +2,7 @@
 audio/
 venv/
 data/
+audio_files/
 app/asset/
 .idea/
 .DS_Store

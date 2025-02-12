@@ -37,3 +37,4 @@ ollama~=0.4.5
 funasr
 torch
 torchaudio
+gradio

@@ -22,12 +22,18 @@ cd alibabacloud-nls-python-sdk
 access key申请传送门：https://help.aliyun.com/zh/isi/getting-started/start-here
 nls app key申请传送门：https://nls-portal.console.aliyun.com/applist
 
-2. 启动ollama
+2. 启动ollama + pull模型
 # 默认使用deepseek-r1:7b模型，如需使用其他模型，可以调整.env中OLLAMA_MODEL变量，并ollama运行对应的模型即可，默认使用deepseek-r1:7b
 ollama run deepseek-r1:7b
 
-3. 执行main.py
+3.【命令行启动】执行main.py
 ./venv/bin/python main.py
+
+4.【界面启动】执行web.py
+# 使用gradio构建的交互页面，full developed with cursor:)
+# 下拉菜单中展示的模型列表，是当前ollama list的所有模型
+# 首次识别，需要加载funasr模型，需要等一会~
+./venv/bin/python web.py
 
 【注意事项】
 1. funasr传送门：https://github.com/modelscope/FunASR

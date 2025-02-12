@@ -22,12 +22,18 @@ A simple ASR-LLM implementation based on pyaudio + funasr + ollama
 # Access key application portal: https://help.aliyun.com/zh/isi/getting-started/start-here
 # NLS app key application portal: https://nls-portal.console.aliyun.com/applist
 
-2. Start Ollama
+2. Start Ollama and pull models
 #By default, the deepseek-r1:7b model is used. If you need to use another model, you can adjust the OLLAMA_MODEL variable in .env and run the corresponding model with Ollama.
 >ollama run deepseek-r1:7b
 
-3. Execute main.py
+3.【terminal】Execute main.py
 >./venv/bin/python main.py
+
+4.【webui】Execute web.py
+# web page built with gradio, full developed with cursor:)
+# the dropdown menu list all models pulled by ollama now
+# the first asr task will take a while, funasr will be loaded to RAM
+>./venv/bin/python web.py
 
 [tips]
 1. funasr: https://github.com/modelscope/FunASR
